@@ -24,9 +24,9 @@ const Questionnaire = () => {
 
   const handleFinishButton = () => {
     setShowModal(true);
-    // setTimeout(() => {
-    //   navigate("/results");
-    // }, 3000);
+    setTimeout(() => {
+      navigate("/results");
+    }, 3000);
   };
 
   return (
