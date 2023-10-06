@@ -3,6 +3,7 @@ import "./ChatPage.scss";
 import backarrow from "../../assets/icons/prime_arrow-up.svg";
 import ProfileImage from "../../assets/icons/Ellipse-181.svg";
 import paperClip from "../../assets/icons/paperclip-attach.svg";
+import uparrow from "../../assets/icons/up-arrow.svg";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -35,6 +36,7 @@ const Chat = () => {
         </div>
         <div className="feedback">Share Feedback</div>
       </header>
+      {/* where the messages appear */}
       <section className="chatSpace">
         <div className="messages">
           {messages.map((message, index) => (
@@ -44,6 +46,7 @@ const Chat = () => {
           ))}
         </div>
       </section>
+      {/* bottom part where you type your message */}
       <div className="chat-container">
         <form className="message-form" onSubmit={handleSendMessage}>
           <input
@@ -58,7 +61,9 @@ const Chat = () => {
             src={paperClip}
             alt="attachements"
           />
-          <button type="submit">Send</button>
+          <button className="submit-message__button" type="submit">
+            <img className="submit__arrow" src={uparrow} alt="Submit message" />{" "}
+          </button>
         </form>
       </div>
     </>

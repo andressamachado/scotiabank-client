@@ -16,6 +16,7 @@
   }
   &__name {
     font-weight: bold;
+    padding-bottom: 0.25rem;
   }
   &__response {
     font-weight: lighter;
@@ -41,6 +42,7 @@
     padding: 0.5rem 1rem;
     box-shadow: 1px 1px 4px 0;
     color: rgb(46, 46, 46);
+    font-size: 13px;
   }
 }
 
@@ -49,6 +51,8 @@
 }
 .message-form {
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
   &__input {
     border-radius: 20px;
     width: 75%;
@@ -59,4 +63,11 @@
   &__attachement {
     margin-right: 0.5rem;
   }
+}
+
+.submit-message__button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
 }
