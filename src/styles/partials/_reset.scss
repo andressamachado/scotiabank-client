@@ -1,3 +1,5 @@
+@use "./typography" as *;
+
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -9,7 +11,8 @@ html {
 body {
   margin: 0;
   background-color: #f7f8f9;
-  font-family: sans-serif;
+  font-family: "Frutiger", sans-serif;
+  font-weight: normal;
 }
 
 *,
@@ -23,4 +26,14 @@ a:hover,
 a:focus {
   text-decoration: none;
   color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Frutiger", sans-serif;
+  font-weight: bold;
 }
