@@ -1,6 +1,6 @@
 @import "../../styles/partials/_reset";
 
-header {
+.chat__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +31,17 @@ header {
 
 .chatSpace {
   height: 35rem;
+  position: relative;
+  .messages__display {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #edf7fc;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    box-shadow: 1px 1px 4px 0;
+    color: rgb(46, 46, 46);
+  }
 }
 
 .footer {

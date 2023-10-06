@@ -8,7 +8,8 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
-  const handleSendMessage = () => {
+  const handleSendMessage = (e) => {
+    e.preventDefault(); // Prevent form submission and page reload
     if (input.trim()) {
       setMessages([...messages, { text: input, sender: "user" }]);
       setInput("");
@@ -17,7 +18,7 @@ const Chat = () => {
 
   return (
     <>
-      <header>
+      <header className="chat__header">
         <img className="backarrow" src={backarrow} alt="back button" />
         <div className="advisor">
           <img
@@ -34,16 +35,17 @@ const Chat = () => {
         </div>
         <div className="feedback">Share Feedback</div>
       </header>
-      <section className="chatSpace"></section>
-      <div className="chat-container">
+      <section className="chatSpace">
         <div className="messages">
           {messages.map((message, index) => (
-            <div key={index} className={`message ${message.sender}`}>
+            <div key={index} className="messages__display">
               {message.text}
             </div>
           ))}
         </div>
-        <form className="message-form">
+      </section>
+      <div className="chat-container">
+        <form className="message-form" onSubmit={handleSendMessage}>
           <input
             type="text"
             className="message-form__input"
@@ -56,7 +58,7 @@ const Chat = () => {
             src={paperClip}
             alt="attachements"
           />
-          <button onClick={handleSendMessage}>Send</button>
+          <button type="submit">Send</button>
         </form>
       </div>
     </>
