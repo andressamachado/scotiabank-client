@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import OptionCard from "../../components/OptionCard/OptionCard";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import backArrowIcon from "../../assets/icons/back-arrow.svg";
+import loadingIcon from "../../assets/icons/loading.svg";
 import "./questionnaire3.scss";
 
 const Questionnaire = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const options = ["Call", "In-app chat", "In person meeting"];
 
-  const testData = [{ bgcolor: "#757575", completed: 100 }];
+  const testData = [{ bgcolor: "#757575", completed: 66 }];
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -15,7 +19,14 @@ const Questionnaire = () => {
   };
 
   const handleBackButton = () => {
-    navigate("/questionnaire");
+    navigate("/questionnaire/2");
+  };
+
+  const handleFinishButton = () => {
+    setShowModal(true);
+    // setTimeout(() => {
+    //   navigate("/results");
+    // }, 3000);
   };
 
   return (
@@ -39,9 +50,26 @@ const Questionnaire = () => {
       {/* next question button section */}
       <div className="questionnaire3__bottom-container">
         <button className="questionnaire3__button" onClick={handleBackButton}>
-          <p> Finish </p>
+          <img src={backArrowIcon} />
+        </button>
+        <button
+          className="questionnaire3__finish-button"
+          onClick={handleFinishButton}
+        >
+          Finish
         </button>
       </div>
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <img src={loadingIcon} alt="loading icon" />
+            <h3> Give us a moment!</h3>
+            <p>
+              Finding the most suitable wealth management advisors for you...
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

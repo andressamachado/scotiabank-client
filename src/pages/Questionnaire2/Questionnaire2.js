@@ -8,7 +8,7 @@ import "./questionnaire2.scss";
 const Questionnaire = () => {
   const options = ["Conservative", "Balanced", "Aggressive"];
 
-  const testData = [{ bgcolor: "#757575", completed: 66 }];
+  const testData = [{ bgcolor: "#757575", completed: 33 }];
   const navigate = useNavigate();
 
   const handleClick = () => {
