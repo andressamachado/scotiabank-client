@@ -7,7 +7,7 @@ import "./questionnaire3.scss";
 const Questionnaire = () => {
   const options = ["Call", "In-app chat", "In person meeting"];
 
-  const testData = [{ bgcolor: "#d91c36", completed: 100 }];
+  const testData = [{ bgcolor: "#757575", completed: 100 }];
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -19,14 +19,14 @@ const Questionnaire = () => {
   };
 
   return (
-    <section className="questionnaire">
+    <section className="questionnaire3">
       {/* question section */}
       <h2> What is your preferred mode of communication with your advisor? </h2>
       {options.map((option) => {
         return <OptionCard answer={option} onClick={handleClick} />;
       })}
 
-      <div className="questionnaire__progress-bar">
+      <div className="questionnaire3__progress-bar">
         {testData.map((item, i) => (
           <ProgressBar
             key={i}
@@ -37,9 +37,9 @@ const Questionnaire = () => {
       </div>
 
       {/* next question button section */}
-      <div className="questionnaire__bottom-container">
-        <button className="questionnaire__button" onClick={handleBackButton}>
-          <img src={backArrowIcon} />
+      <div className="questionnaire3__bottom-container">
+        <button className="questionnaire3__button" onClick={handleBackButton}>
+          <p> Finish </p>
         </button>
       </div>
     </section>

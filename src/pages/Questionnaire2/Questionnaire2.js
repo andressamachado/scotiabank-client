@@ -8,7 +8,7 @@ import "./questionnaire2.scss";
 const Questionnaire = () => {
   const options = ["Conservative", "Balanced", "Aggressive"];
 
-  const testData = [{ bgcolor: "#d91c36", completed: 66 }];
+  const testData = [{ bgcolor: "#757575", completed: 66 }];
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -20,14 +20,14 @@ const Questionnaire = () => {
   };
 
   return (
-    <section className="questionnaire">
+    <section className="questionnaire2">
       {/* question section */}
       <h2> How confortable are you with investment rist? </h2>
       {options.map((option) => {
         return <OptionCard answer={option} onClick={handleClick} />;
       })}
 
-      <div className="questionnaire__progress-bar">
+      <div className="questionnaire2__progress-bar">
         {testData.map((item, i) => (
           <ProgressBar
             key={i}
@@ -38,8 +38,8 @@ const Questionnaire = () => {
       </div>
 
       {/* next question button section */}
-      <div className="questionnaire__bottom-container">
-        <button className="questionnaire__button" onClick={handleBackButton}>
+      <div className="questionnaire2__bottom-container">
+        <button className="questionnaire2__button" onClick={handleBackButton}>
           <img src={backArrowIcon} />
         </button>
       </div>
