@@ -17,7 +17,7 @@ const Chat = () => {
 
   return (
     <>
-      <header>
+      <header className="chat__header">
         <img className="backarrow" src={backarrow} alt="back button" />
         <div className="advisor">
           <img

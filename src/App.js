@@ -4,6 +4,7 @@ import Questionnaire from "./pages/Questionnaire/Questionnaire";
 import Questionnaire2 from "./pages/Questionnaire2/Questionnaire2";
 import Questionnaire3 from "./pages/Questionnaire3/Questionnaire3";
 import ChatPage from "./pages/ChatPage/ChatPage";
+import AdvisorInfo from "./components/AdvisorInfo/AdvisorInfo";
 import "./app.scss";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
+        <AdvisorInfo />
         <Routes>
           <Route path={`/questionnaire`} element={<Questionnaire />} />
           <Route path={`/questionnaire/2`} element={<Questionnaire2 />} />

@@ -6,7 +6,7 @@ import Esther from "../../assets/icons/Ellipse 180.svg";
 
 const AvailableAdvisors = () => {
   return (
-    <main className="main">
+    <main className="main_advisors">
       <h2 className="main__h2">Available Advisors</h2>
       <div className="advisor__card">
         <div className="advisor__wrapper">
