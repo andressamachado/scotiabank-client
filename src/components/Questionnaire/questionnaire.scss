@@ -1,0 +1,60 @@
+@use "../../styles/partials/headerOverlay" as *;
+
+.questionnaire {
+  background-color: white;
+  margin: 0 16px;
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  @include headerOverlay;
+  position: relative;
+
+  h2 {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+    padding-inline: 0.5rem;
+    border-bottom: 1px solid #f1f4fa;
+  }
+
+  &__bottom-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-self: flex-end;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 2rem;
+  }
+
+  &__button {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #367da7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -3px 6px 5px 0px rgba(19, 24, 44, 0.1);
+
+    img {
+      height: 2.5rem;
+      padding-left: 5px;
+    }
+
+    &:hover {
+      background-color: #1e5a7c;
+      box-shadow: none;
+    }
+  }
+}
