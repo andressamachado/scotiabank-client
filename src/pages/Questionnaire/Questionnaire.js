@@ -12,7 +12,7 @@ const Questionnaire = () => {
     "Other",
   ];
 
-  const testData = [{ bgcolor: "#757575", completed: 33 }];
+  const testData = [{ bgcolor: "#757575", completed: 0 }];
   const navigate = useNavigate();
 
   const handleClick = () => {
