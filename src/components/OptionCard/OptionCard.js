@@ -1,8 +1,8 @@
 import "./option-card.scss";
 
-const OptionCard = ({ answer }) => {
+const OptionCard = ({ answer, onClick }) => {
   return (
-    <div className="option-card">
+    <div className="option-card" onClick={onClick}>
       <span>{answer}</span>
     </div>
   );
