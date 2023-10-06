@@ -8,4 +8,4 @@ const OptionCard = ({ answer }) => {
   );
 };
 
-export default OptionCard;
+export { OptionCard };

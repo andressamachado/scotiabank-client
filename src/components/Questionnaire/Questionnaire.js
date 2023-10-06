@@ -42,4 +42,4 @@ const Questionnaire = () => {
   );
 };
 
-export default Questionnaire;
+export { Questionnaire };
