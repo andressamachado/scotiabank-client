@@ -27,7 +27,7 @@ const AvailableAdvisors = () => {
             <div className="advisor__vectorIcon">
               <img src={Vector} alt="vector Icon" />
             </div>
-            <div className="advisor__investing">Invensting</div>
+            <div className="advisor__investing">Investing</div>
             <div className="advisor__company">Wills & Trusts</div>
 
             <div className="advisor__paragraph">
@@ -35,9 +35,11 @@ const AvailableAdvisors = () => {
               my work ours, I'm always online to chat with my clients!"
             </div>
           </div>
+
+          <button onClick={handleAdvisor}>c</button>
         </div>
 
-        <div onClick={handleAdvisor} className="advisor__card">
+        <div className="advisor__card">
           <div className="advisor__wrapper">
             <img className="advisor__photo" src={Cameron} alt="Keanu Reeves" />
           </div>
@@ -47,7 +49,7 @@ const AvailableAdvisors = () => {
             <div className="advisor__vectorIcon">
               <img src={Vector} alt="vector Icon" />
             </div>
-            <div className="advisor__investing">Invensting</div>
+            <div className="advisor__investing">Investing</div>
             <div className="advisor__company">Credit</div>
 
             <div className="advisor__paragraph">
@@ -55,8 +57,6 @@ const AvailableAdvisors = () => {
               homeowners."
             </div>
           </div>
-
-          <button onClick={handleAdvisor}>c</button>
         </div>
 
         <div className="advisor__card">
@@ -69,7 +69,7 @@ const AvailableAdvisors = () => {
             <div className="advisor__vectorIcon">
               <img src={Vector} alt="vector Icon" />
             </div>
-            <div className="advisor__investing">Invensting</div>
+            <div className="advisor__investing">Investing</div>
             <div className="advisor__company">Retirement Plan</div>
 
             <div className="advisor__paragraph">
