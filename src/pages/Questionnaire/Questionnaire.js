@@ -50,7 +50,7 @@ const Questionnaire = () => {
           </button>
         </div>
       </section>
-      <img src={PageFooter} />
+      <img className="scotia-footer" src={PageFooter} />
     </>
   );
 };

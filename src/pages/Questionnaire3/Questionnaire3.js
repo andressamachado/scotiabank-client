@@ -76,7 +76,7 @@ const Questionnaire = () => {
           </div>
         )}
       </section>
-      <PageFooter />
+      <img className="scotia-footer" src={PageFooter} />
     </>
   );
 };
