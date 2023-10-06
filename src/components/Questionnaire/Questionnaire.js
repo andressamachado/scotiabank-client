@@ -1,5 +1,7 @@
+import "react-step-progress-bar/styles.css";
 import OptionCard from "../OptionCard/OptionCard";
-import nextPageIcon from "../../assets/icons/next.svg";
+import ProgressBar from "../ProgressBar/ProgressBar";
+import backArrowIcon from "../../assets/icons/back-arrow.svg";
 import "./questionnaire.scss";
 
 const Questionnaire = () => {
@@ -10,6 +12,8 @@ const Questionnaire = () => {
     "Other",
   ];
 
+  const testData = [{ bgcolor: "#d91c36", completed: 33 }];
+
   return (
     <section className="questionnaire">
       {/* question section */}
@@ -18,10 +22,20 @@ const Questionnaire = () => {
         return <OptionCard answer={option} />;
       })}
 
+      <div className="questionnaire__progress-bar">
+        {testData.map((item, i) => (
+          <ProgressBar
+            key={i}
+            bgcolor={item.bgcolor}
+            completed={item.completed}
+          />
+        ))}
+      </div>
+
       {/* next question button section */}
       <div className="questionnaire__bottom-container">
         <button className="questionnaire__button">
-          <img src={nextPageIcon} />
+          <img src={backArrowIcon} />
         </button>
       </div>
     </section>
