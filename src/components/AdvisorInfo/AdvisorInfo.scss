@@ -92,11 +92,15 @@
     margin: auto;
     color: #4f4f4f;
     border-top: 0.09rem solid gray;
+    width: 250px;
+    height: 100px;
+    justify-content: inherit;
     &-calendar {
       padding: 0.5rem 0.4rem 0 0.2rem;
     }
     &-container {
       padding-top: 1rem;
+      width: 100%;
     }
 
     &-appointment {
