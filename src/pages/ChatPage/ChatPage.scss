@@ -1,0 +1,51 @@
+@import "../../styles/partials/_reset";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #d9d9d9;
+  padding: 1rem;
+}
+
+.advisor {
+  display: flex;
+  align-items: center;
+  &__image {
+    margin: 0 0.5rem;
+  }
+  &__name {
+    font-weight: bold;
+  }
+  &__response {
+    font-weight: lighter;
+    font-size: 10px;
+  }
+}
+
+.feedback {
+  color: #367da7;
+  font-size: 10px;
+  padding-bottom: 1rem;
+}
+
+.chatSpace {
+  height: 35rem;
+}
+
+.footer {
+  background-color: #f9fcfd;
+}
+.message-form {
+  padding: 1rem;
+  &__input {
+    border-radius: 20px;
+    width: 75%;
+    border: 2px solid #f0f0f0;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  &__attachement {
+    margin-right: 0.5rem;
+  }
+}
