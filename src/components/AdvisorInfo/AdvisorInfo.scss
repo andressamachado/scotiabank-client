@@ -1,0 +1,115 @@
+.advisors {
+  background-color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-bottom: 0.125rem solid gray;
+  border-bottom-width: 70%;
+  border: 50%;
+
+  &__heading {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.3125rem;
+    margin: 0;
+    color: #4f4f4f;
+  }
+  &__backarrow {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+
+  &__section {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 2.5rem;
+
+    &-image {
+      padding-right: 1rem;
+    }
+    &-photo {
+      width: 5.5625rem;
+      height: 4.5rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    &-name {
+      width: 7.9375rem;
+      height: 1.4375rem;
+      font-weight: 700;
+      color: #4f4f4f;
+    }
+    &-gender {
+      font-size: 0.8rem;
+      color: #4f4f4f;
+    }
+    &-type {
+      font-size: 0.9375rem;
+      line-height: 1.3125rem;
+      font-weight: 400;
+      flex-basis: 80%;
+      color: #4f4f4f;
+    }
+    &-investment {
+      width: 4.6875rem;
+      height: 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      padding: 0 0.5rem;
+      flex-basis: 29%;
+      background-color: #d9d9d9;
+      border-radius: 5px;
+      color: #4f4f4f;
+    }
+    &-company {
+      height: 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      border-radius: 5px;
+      background-color: #d9d9d9;
+      margin-left: 0.5rem;
+      padding: 0.5rem;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      color: #4f4f4f;
+    }
+  }
+
+  &__timeframe {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: #4f4f4f;
+    border-top: 0.09rem solid gray;
+    &-calendar {
+      padding: 0.5rem 0.4rem 0 0.2rem;
+    }
+    &-container {
+      padding-top: 1rem;
+    }
+
+    &-appointment {
+    }
+    &-information {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      font-weight: 400;
+    }
+    &-schedule {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 0.4rem;
+    }
+  }
+}
