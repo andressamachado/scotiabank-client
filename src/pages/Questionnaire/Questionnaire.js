@@ -51,4 +51,4 @@ const Questionnaire = () => {
   );
 };
 
-export { Questionnaire };
+export default Questionnaire;

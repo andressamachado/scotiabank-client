@@ -71,4 +71,4 @@ const AvailableAdvisors = () => {
   );
 };
 
-export { AvailableAdvisors };
+export default AvailableAdvisors;
