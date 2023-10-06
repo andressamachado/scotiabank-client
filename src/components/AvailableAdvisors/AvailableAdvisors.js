@@ -1,4 +1,5 @@
 import "./AvailableAdvisors.scss";
+import { useNavigate } from "react-router-dom";
 import Vector from "../../assets/icons/Vector.svg";
 import Keanu from "../../assets/icons/Ellipse 22.svg";
 import Cameron from "../../assets/icons/Ellipse 179.svg";
@@ -6,6 +7,12 @@ import Esther from "../../assets/icons/Ellipse 180.svg";
 import PageFooter from "../../assets/logo/footer-image.svg";
 
 const AvailableAdvisors = () => {
+  const navigate = useNavigate();
+
+  const handleAdvisor = () => {
+    navigate("/advisor");
+  };
+
   return (
     <>
       <main className="main">
@@ -30,7 +37,7 @@ const AvailableAdvisors = () => {
           </div>
         </div>
 
-        <div className="advisor__card">
+        <div onClick={handleAdvisor} className="advisor__card">
           <div className="advisor__wrapper">
             <img className="advisor__photo" src={Cameron} alt="Keanu Reeves" />
           </div>
@@ -48,6 +55,8 @@ const AvailableAdvisors = () => {
               homeowners."
             </div>
           </div>
+
+          <button onClick={handleAdvisor}>c</button>
         </div>
 
         <div className="advisor__card">
