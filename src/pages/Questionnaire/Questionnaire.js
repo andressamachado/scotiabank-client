@@ -1,6 +1,6 @@
-import "react-step-progress-bar/styles.css";
-import OptionCard from "../OptionCard/OptionCard";
-import ProgressBar from "../ProgressBar/ProgressBar";
+import { useNavigate } from "react-router-dom";
+import OptionCard from "../../components/OptionCard/OptionCard";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import backArrowIcon from "../../assets/icons/back-arrow.svg";
 import "./questionnaire.scss";
 
@@ -13,13 +13,22 @@ const Questionnaire = () => {
   ];
 
   const testData = [{ bgcolor: "#d91c36", completed: 33 }];
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/questionnaire/2");
+  };
+
+  const handleBackButton = () => {
+    navigate("/");
+  };
 
   return (
     <section className="questionnaire">
       {/* question section */}
       <h2> What are your primary financial goals? </h2>
       {options.map((option) => {
-        return <OptionCard answer={option} />;
+        return <OptionCard answer={option} onClick={handleClick} />;
       })}
 
       <div className="questionnaire__progress-bar">
@@ -34,7 +43,7 @@ const Questionnaire = () => {
 
       {/* next question button section */}
       <div className="questionnaire__bottom-container">
-        <button className="questionnaire__button">
+        <button className="questionnaire__button" onClick={handleBackButton}>
           <img src={backArrowIcon} />
         </button>
       </div>
