@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Scotiabank-client
+
+A 24 hour industry sponsored hackathon project. Working with UX designers as well as Data Scientists, this is the front end to our team's "modeled" solution to the sponsored problem- connecting clients to specialized financial advisors.  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
